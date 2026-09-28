@@ -74,7 +74,7 @@ Decryption:
 Ciphertext : KHOOR
 Key        : 3
 Plaintext  : HELLO
-
+```
 ## 🖥️ Application Screenshots
 
 ### Fig 1 — Dashboard / Cipher Console
