@@ -33,56 +33,220 @@ st.set_page_config(
 st.markdown("""
 <style>
 
+/* =========================================================
+   THEME-AWARE BASE
+   ========================================================= */
+
 .stApp {
     background:
-        radial-gradient(circle at 10% 10%, #16213e 0%, transparent 35%),
-        radial-gradient(circle at 90% 20%, #102a43 0%, transparent 35%),
-        #070b12;
-    color: #f5f7fa;
+        radial-gradient(
+            circle at 10% 10%,
+            color-mix(in srgb, var(--primary-color) 12%, transparent),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            color-mix(in srgb, var(--primary-color) 8%, transparent),
+            transparent 35%
+        ),
+        var(--background-color);
+
+    color: var(--text-color);
 }
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
 
 .main-title {
     font-size: 4rem;
     font-weight: 900;
     letter-spacing: -3px;
     margin-bottom: 0;
+    color: var(--text-color);
 }
 
 .subtitle {
-    color: #8b98a9;
+    color: var(--secondary-text-color);
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
 
 .section-title {
     font-size: 1.8rem;
     font-weight: 800;
     margin-top: 2rem;
+    color: var(--text-color);
 }
+
+
+/* =========================================================
+   SECURITY CARDS
+   ========================================================= */
 
 .security-card {
     padding: 1.2rem;
-    border: 1px solid #263449;
+
+    border: 1px solid var(--border-color);
+
     border-radius: 16px;
-    background: rgba(15, 23, 42, 0.72);
+
+    background: var(--secondary-background-color);
+
     margin-bottom: 1rem;
 }
 
+
+/* =========================================================
+   RESULT BOX
+   ========================================================= */
+
 .result-box {
     padding: 1.5rem;
+
     border-radius: 14px;
-    border: 1px solid #334155;
-    background: #0d1420;
+
+    border: 1px solid var(--border-color);
+
+    background: var(--secondary-background-color);
+
+    color: var(--text-color);
+
     font-size: 1.3rem;
+
     font-family: monospace;
+
+    word-break: break-word;
 }
+
+
+/* =========================================================
+   METRIC BOX
+   ========================================================= */
 
 .metric-box {
     padding: 1rem;
+
     border-radius: 14px;
-    background: #0d1420;
-    border: 1px solid #263449;
+
+    background: var(--secondary-background-color);
+
+    border: 1px solid var(--border-color);
+
     text-align: center;
+
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   TEXT AREA
+   ========================================================= */
+
+textarea {
+    color: var(--text-color) !important;
+    background-color: var(--secondary-background-color) !important;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input {
+    color: var(--text-color) !important;
+}
+
+
+/* =========================================================
+   CODE BLOCKS
+   ========================================================= */
+
+.stCodeBlock {
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+[data-testid="stSidebar"] {
+    background-color: var(--secondary-background-color);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.stButton > button {
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EXPANDERS
+   ========================================================= */
+
+[data-testid="stExpander"] {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+hr {
+    border-color: var(--border-color);
+}
+
+
+/* =========================================================
+   DARK MODE ENHANCEMENT
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    .stApp {
+        background:
+            radial-gradient(
+                circle at 10% 10%,
+                #16213e 0%,
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 90% 20%,
+                #102a43 0%,
+                transparent 35%
+            ),
+            #070b12;
+    }
+
+    .result-box,
+    .security-card,
+    .metric-box {
+        background: rgba(15, 23, 42, 0.72);
+        border-color: #263449;
+    }
 }
 
 </style>
