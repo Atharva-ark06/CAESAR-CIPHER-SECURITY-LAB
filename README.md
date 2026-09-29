@@ -1,4 +1,4 @@
-# 🔐 Caesar Cipher Security Lab
+# 🔐 Caesar Cipher Security Lab  
 
 > An interactive cryptography laboratory built with Python, Streamlit, and SQLite for demonstrating Caesar Cipher encryption, decryption, cryptanalysis, security weaknesses, and automated testing.
 
