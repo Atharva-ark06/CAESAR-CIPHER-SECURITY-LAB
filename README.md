@@ -221,6 +221,8 @@ This project was developed as an **Information Security / Cryptography practical
 B.Tech Computer Science & Engineering  
 G M University, Davangere
 
+```
+
 GitHub: https://github.com/Atharva-ark06
 
 ## ⭐ Project
