@@ -151,7 +151,7 @@ The Automated Test Center validates encryption, decryption, round-trip recovery,
 
     git clone https://github.com/Atharva-ark06/CAESAR-CIPHER-SECURITY-LAB.git
 ```
- cd CAESAR-CIPHER-SECURITY-LAB
+cd CAESAR-CIPHER-SECURITY-LAB
 ```
 ### 2. Create a Virtual Environment
 
