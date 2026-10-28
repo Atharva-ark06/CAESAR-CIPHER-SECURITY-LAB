@@ -1,0 +1,2 @@
+# Development and test tooling; install after requirements.txt
+pytest>=8.0,<9.0
